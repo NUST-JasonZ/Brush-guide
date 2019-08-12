@@ -1,0 +1,28 @@
+输入的无论是什么，都会转成字符和字符串
+sys.stdin.readline() 会读取末尾'\n'，加.strip()，去掉回车符，同时去掉前后的空格
+ 
+第一种：
+#输入一个数
+n = int(sys.stdin.readline().strip())      #输入一个元素，并转成整型int
+print(n)
+ 
+第二种：
+输入有n行，用for循环，一行有任意个字符字符串都可以
+seq = [ ]
+for i in range(n):
+    line = sys.stdin.readline().strip()       #line此时是字符串列表，不知line有多少个元素
+    value = map(int，line.split())   #map(函数，列表)Python2.返回列表，Python3.返回迭代器。
+    seq += value                     #合并每一行列表
+print(seq)
+
+第三种：
+#不确定输入有多少行，用while循环
+seq = [ ]
+while 1:
+    line = sys.stdin.readline().strip()     #line此时是字符串列表，并已去掉前后空格 回车符
+    if line:
+        line = map(int，line.split()) #把line的空格元素去掉，转成字符串列表list，并转成整型int
+    else:
+        break
+    seq += line
+print(seq)
