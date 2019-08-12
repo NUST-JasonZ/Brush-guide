@@ -1,3 +1,15 @@
+与input()相似，但有不同：
+代码：
+import sys
+a = list(sys.stdin.readline())
+b = list(input())
+
+输入：
+asdgjk
+asdgjk
+输出：
+['a', 's', 'd', 'g', 'j', 'k', '\n']
+['a', 's', 'd', 'g', 'j', 'k']
 输入的无论是什么，都会转成字符和字符串
 sys.stdin.readline() 会读取末尾'\n'，加.strip()，去掉回车符，同时去掉前后的空格
  
