@@ -1,0 +1,60 @@
+1.取出字典所有的键
+  my_dict = dict(name="lowman", age=45, money=998, hourse=None)
+  key_list = my_dict.keys()
+  print(list(key_list))  
+  -》['name', 'age', 'money', 'hourse']
+2.取出字典所有的值
+  my_dict = dict(name="lowman", age=45, money=998, hourse=None)
+  value_list = my_dict.values() 
+  print(list(value_list))  
+  -》['lowman', 45, 998, None]
+3.遍历字典
+  my_dict = dict(name="lowman", age=45, money=998, hourse=None)
+  for item in my_dict:
+    print(item)  
+  -》
+  name
+  age
+  money
+  hourse
+4.自带方法 items() 可以同时取出键与值
+  for key, value in my_dict.items():
+　　　　print(key,value)
+  -》name lowman
+    age 45
+    money 998
+    hourse None
+
+　for item in my_dict.items()：
+　　　　print(item) # 这样取值的话,返回的就是一个元组,里面包含两个元素,第一个是键,第二个为值
+  -》
+  ('name', 'lowman')
+  ('age', 45)
+  ('money', 998)
+  ('hourse', None)
+5.删除一个字典的键值对:
+  my_dict = {"name":"lowman", "age":12}
+  del my_dict["name"]
+6.有序添加
+  import collections
+
+  my_order_dict = collections.OrderedDict()
+  my_order_dict["name"] = "lowman"
+  my_order_dict["money"] = 998
+  my_order_dict["age"] = 45
+  my_order_dict["hourse"] = None
+
+  for key, value in my_order_dict.items():
+      print(key, value)
+7.无序添加
+  my_dict = dict()
+  my_dict["name"] = "lowman"
+  my_dict["age"] = 26
+  my_dict["girl"] = "Tailand"
+  my_dict["money"] = 80
+  my_dict["hourse"] = None
+  for key, value in my_dict.items(): 
+　　  print(key, value)
+8.排序遍历
+  for key in sorted(my_dict):
+　　　　print(key)
