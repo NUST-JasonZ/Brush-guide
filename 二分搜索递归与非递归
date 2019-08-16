@@ -1,0 +1,27 @@
+非递归：
+def binary_search(alist, data):
+    n = len(alist)
+    first = 0
+    last = n - 1
+    while first <= last:
+        mid = (last + first) // 2
+        if alist[mid] > data:
+            last = mid - 1
+        elif alist[mid] < data:
+            first = mid + 1
+        else:
+            return mid
+    return -1
+
+递归：
+def binary_search(alist, left, right, data):
+    if left > right:
+        return -1
+    mid = (left + right) // 2
+    if alist[mid] > data:
+        right = mid - 1
+    elif alist[mid] < data:
+        left = mid + 1
+    else:
+        return mid
+    return binary_search(alist, left, right, data)
