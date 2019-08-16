@@ -1,0 +1,7 @@
+字符串.isalnum()   所有字符都是数字或者字母，为真返回 Ture，否则返回 False。
+字符串.isalpha()   所有字符都是字母，为真返回 Ture，否则返回 False。
+字符串.isdigit()   所有字符都是数字，为真返回 Ture，否则返回 False。
+字符串.islower()   所有字符都是小写，为真返回 Ture，否则返回 False。
+字符串.isupper()   所有字符都是大写，为真返回 Ture，否则返回 False。
+字符串.istitle()   所有单词都是首字母大写，为真返回 Ture，否则返回 False。
+字符串.isspace()   所有字符都是空白字符，为真返回 Ture，否则返回 False。
